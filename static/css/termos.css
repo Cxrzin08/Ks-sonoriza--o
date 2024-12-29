@@ -108,7 +108,7 @@ section p {
     color: #f0f0f0;
     line-height: 1.6;
     animation: fadeIn 2s ease-in-out;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
 }
 
 footer {
