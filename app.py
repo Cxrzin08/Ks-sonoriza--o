@@ -18,5 +18,13 @@ def sobre():
 def contato():
     return render_template("contato.html")
 
+@app.route("/termos")
+def termos():
+    return render_template("termos.html")
+
+@app.route("/politica")
+def politica():
+    return render_template("politica.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

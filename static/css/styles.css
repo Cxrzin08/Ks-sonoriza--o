@@ -3,46 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #000, #333);
-    color: yellow;
+    color: #fff;
     animation: fadeIn 1s ease-in-out;
     position: relative;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: -1;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    animation: slideDown 1s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header .logo {
-    width: 200px;
-    height: auto;
-    border: none; /* Remove o contorno da logo */
-    border-radius: 0; /* Remove as bordas arredondadas da logo */
-}
-
-header h1 {
-    color: yellow;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 3em;
-    margin: 10px 0 0 0;
-    border: none; /* Remove o contorno do texto do título */
-    display: inline-block;
-    padding: 0; /* Remove o padding do texto do título */
-    border-radius: 0; /* Remove as bordas arredondadas do texto do título */
 }
 
 nav {
@@ -86,64 +49,146 @@ nav .nav-links a:hover {
     transform: scale(1.1);
 }
 
-section {
+header {
+    text-align: center;
+    padding: 20px;
+    animation: slideDown 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo {
+    width: 200px;
+    
+    height: auto;
+    border: none; /* Remove o contorno da logo */
+    border-radius: 10; /* Remove as bordas arredondadas da logo */
+}
+
+header h1 {
+    color: yellow;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 3em;
+    margin: 10px 0 0 0;
+    border: none; /* Remove o contorno do texto do título */
+    display: inline-block;
+    padding: 0; /* Remove o padding do texto do título */
+    border-radius: 0; /* Remove as bordas arredondadas do texto do título */
+}
+
+#eventos {
     padding: 40px 20px;
-    text-align: left;
+    text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
 
-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #b0b0b0; /* Cor cinza metálico */
-    background: none; /* Remove o gradiente */
-    background-clip: border-box; /* Define the standard background-clip */
-    -webkit-background-clip: border-box; /* Remove o background-clip */
-    -webkit-text-fill-color: #b0b0b0; /* Cor cinza metálico */
-}
-
-section p {
-    font-size: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    color: yellow;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.servico, .evento {
+.evento {
     display: flex;
     align-items: center;
     margin: 40px 0;
     animation: fadeIn 1.5s ease-in-out;
-    border: 2px solid #ccc; /* Borda cinza ao redor do contorno */
+    border: 2px solid #ccc;
     border-radius: 10px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.servico img, .evento img {
+.evento img {
     width: 100%;
     max-width: 300px;
     height: auto;
     border-radius: 5px;
-    border: 2px solid #ccc; /* Borda cinza ao redor das imagens */
+    border: 2px solid #ccc;
     transition: transform 0.3s, box-shadow 0.3s;
     margin-right: 20px;
 }
 
-.servico img:hover, .evento img:hover {
+.evento img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.servico .descricao, .evento .descricao {
+.evento .descricao {
     max-width: 500px;
 }
 
-.servico h3, .evento h3 {
+.evento h3 {
     font-size: 28px;
     color: yellow;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: pulse 2s infinite; /* Animação de pulsar */
+}
+
+#localizacao {
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.localizacao-container {
+    border: 2px solid #b0b0b0; /* Adiciona contorno */
+    padding: 20px;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    display: inline-block;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.localizacao-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #b0b0b0; /* Cor cinza metálico claro */
+    background: none; /* Remove o gradiente */
+  
+    -webkit-text-fill-color: #b0b0b0; /* Cor cinza metálico claro */
+    animation: pulse 2s infinite; /* Animação de pulsar */
+    text-shadow: 0 0 10px #b0b0b0; /* Adiciona brilho */
+}
+
+.localizacao-container p {
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    color: #f0f0f0; /* Cor branca ou cinza mais claro */
+    font-family: 'Georgia', serif; /* Melhora a fonte */
+    animation: fadeIn 2s ease-in-out;
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+#contato {
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contato-container {
+    border: 2px solid #b0b0b0; /* Adiciona contorno */
+    padding: 20px;
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    display: inline-block;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contato-container h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #b0b0b0; /* Cor cinza metálico claro */
+    background: none; /* Remove o gradiente */
+ 
+    -webkit-text-fill-color: #b0b0b0; /* Cor cinza metálico claro */
+    animation: pulse 2s infinite; /* Animação de pulsar */
+    text-shadow: 0 0 10px #b0b0b0; /* Adiciona brilho */
+}
+
+.contato-container p {
+    font-size: 24px; /* Aumenta o tamanho da fonte */
+    color: #f0f0f0; /* Cor branca ou cinza mais claro */
+    font-family: 'Georgia', serif; /* Melhora a fonte */
+    animation: fadeIn 2s ease-in-out;
+    line-height: 1.6; /* Melhora a legibilidade */
 }
 
 footer {
@@ -259,6 +304,18 @@ footer a:hover {
     }
     to {
         transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
