@@ -96,14 +96,14 @@ header h1 {
     margin-bottom: 20px;
     color: #b0b0b0; /* Cor cinza metálico claro */
     background: none; /* Remove o gradiente */
- 
+   
     -webkit-text-fill-color: #b0b0b0; /* Cor cinza metálico claro */
     animation: pulse 2s infinite; /* Animação de pulsar */
     text-shadow: 0 0 10px #b0b0b0; /* Adiciona brilho */
 }
 
 #sobre p.descricao {
-    font-size: 24px; /* Aumenta o tamanho da fonte */
+    font-size: 26px; /* Aumenta o tamanho da fonte */
     color: #f0f0f0; /* Cor branca ou cinza mais claro */
     font-family: 'Georgia', serif; /* Melhora a fonte */
     animation: fadeIn 2s ease-in-out;
@@ -130,7 +130,6 @@ header h1 {
     margin-bottom: 20px;
     color: #b0b0b0; /* Cor cinza metálico claro */
     background: none; /* Remove o gradiente */
-
     -webkit-text-fill-color: #b0b0b0; /* Cor cinza metálico claro */
     animation: pulse 2s infinite; /* Animação de pulsar */
     text-shadow: 0 0 10px #b0b0b0; /* Adiciona brilho */
@@ -182,6 +181,14 @@ header h1 {
     border-radius: 10px; /* Adiciona bordas arredondadas */
     max-width: 800px;
     animation: fadeIn 1s ease-in-out;
+}
+
+.h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: yellow;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: pulse 2s infinite; /* Animação de pulsar */
 }
 
 .servico img {
@@ -346,4 +353,52 @@ img {
 img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    nav .nav-links {
+        flex-direction: column;
+    }
+
+    nav .nav-links a {
+        margin: 10px 0;
+    }
+
+    .evento, .membro {
+        flex-direction: column;
+    }
+
+    .evento img, .membro img {
+        margin: 0 0 20px 0;
+    }
+
+    .descricao-container, .servico, .contato-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .localizacao-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .evento h3, .localizacao-container h2, .contato-container h2 {
+        font-size: 24px;
+    }
+
+    .evento p, .localizacao-container p, .contato-container p {
+        font-size: 18px;
+    }
+
+    .localizacao-container iframe {
+        height: 200px;
+    }
 }

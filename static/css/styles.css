@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #000, #333);
-    color: #fff;
+    color: yellow; /* Alterado para amarelo */
     animation: fadeIn 1s ease-in-out;
     position: relative;
 }
@@ -60,10 +60,9 @@ header {
 
 header .logo {
     width: 200px;
-    
     height: auto;
     border: none; /* Remove o contorno da logo */
-    border-radius: 10; /* Remove as bordas arredondadas da logo */
+    border-radius: 10px; /* Remove as bordas arredondadas da logo */
 }
 
 header h1 {
@@ -142,7 +141,7 @@ header h1 {
     margin-bottom: 20px;
     color: #b0b0b0; /* Cor cinza metálico claro */
     background: none; /* Remove o gradiente */
-  
+    
     -webkit-text-fill-color: #b0b0b0; /* Cor cinza metálico claro */
     animation: pulse 2s infinite; /* Animação de pulsar */
     text-shadow: 0 0 10px #b0b0b0; /* Adiciona brilho */
@@ -177,7 +176,7 @@ header h1 {
     margin-bottom: 20px;
     color: #b0b0b0; /* Cor cinza metálico claro */
     background: none; /* Remove o gradiente */
- 
+  
     -webkit-text-fill-color: #b0b0b0; /* Cor cinza metálico claro */
     animation: pulse 2s infinite; /* Animação de pulsar */
     text-shadow: 0 0 10px #b0b0b0; /* Adiciona brilho */
@@ -212,6 +211,23 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social a {
+    color: yellow;
+    font-size: 2em; /* Aumenta o tamanho dos ícones */
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social a:hover {
+    transform: scale(1.2);
 }
 
 .cookie-banner {
@@ -360,4 +376,52 @@ img {
 img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    nav .nav-links {
+        flex-direction: column;
+    }
+
+    nav .nav-links a {
+        margin: 10px 0;
+    }
+
+    .evento {
+        flex-direction: column;
+    }
+
+    .evento img {
+        margin: 0 0 20px 0;
+    }
+
+    .localizacao-container, .contato-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .localizacao-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .evento h3, .localizacao-container h2, .contato-container h2 {
+        font-size: 24px;
+    }
+
+    .evento p, .localizacao-container p, .contato-container p {
+        font-size: 18px;
+    }
+
+    .localizacao-container iframe {
+        height: 200px;
+    }
 }

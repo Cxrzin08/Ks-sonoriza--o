@@ -107,6 +107,8 @@ section p {
     font-size: 28px;
     color: yellow;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    animation: pulse 2s infinite; /* Animação de pulsar */
 }
 
 footer {
@@ -203,6 +205,18 @@ footer a:hover {
     }
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* Additional styles to enhance the visual appeal */
 body::before {
     content: '';
@@ -244,4 +258,46 @@ img {
 img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    nav .nav-links {
+        flex-direction: column;
+    }
+
+    nav .nav-links a {
+        margin: 10px 0;
+    }
+
+    .servico {
+        flex-direction: column;
+    }
+
+    .servico img {
+        margin: 0 0 20px 0;
+    }
+
+    section p {
+        font-size: 18px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+
+    .servico h3 {
+        font-size: 24px;
+    }
+
+    .servico .descricao {
+        max-width: 100%;
+    }
 }
