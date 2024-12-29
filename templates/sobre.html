@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KS Sonorização - Conheça nossa equipe de profissionais.">
+    <title>Sobre Nós - KS Sonorização</title>
+    <link rel="stylesheet" href="/static/css/stylesobre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <nav>
+        <img src="/static/images/logo.jpg" alt="KS Sonorização" class="logo-small">
+        <div class="nav-links">
+            <a href="/">Início</a>
+            <a href="/servicos">Serviços</a>
+            <a href="/sobre">Sobre Nós</a>
+            <a href="/contato">Contato</a>
+        </div>
+    </nav>
+    <header>
+        <img src="/static/images/logo.jpg" alt="KS Sonorização" class="logo">
+        <h1>KS Sonorização</h1>
+    </header>
+
+    <div class="servico">
+        <img src="/static/images/nossaequipe.jpg" alt="Nossa Equipe">
+        <div class="descricao">
+            <h2>Oferecemos soluções completas de sonorização para eventos de todos os tamanhos, garantindo a melhor qualidade para seu evento.</h2>
+        </div>
+    </div>
+
+    <section id="sobre">
+        <div class="descricao-container">
+            <h2>Sobre Nós</h2>
+            <p class="descricao">Somos uma empresa com sólida base familiar, especializada em serviços de sonorização e iluminação para eventos sociais e corporativos. Nosso compromisso é oferecer soluções de alta qualidade, atendendo às necessidades específicas de cada cliente com profissionalismo e excelência.</p>
+        </div>
+    </section>
+
+    <section id="equipe">
+        <h2>Nossa Equipe</h2>
+        <div class="membro">
+            <img src="/static/images/membro1.jpg" alt="Carlos Britto">
+            <div class="descricao">
+                <h3>Carlos Britto</h3>
+                <p>Fundador e DJ principal, Carlos tem mais de 20 anos de experiência na indústria de eventos.</p>
+            </div>
+        </div>
+        <div class="membro">
+            <img src="/static/images/membro2.jpg" alt="Felipe Britto">
+            <div class="descricao">
+                <h3>Felipe Britto</h3>
+                <p>DJ, Felipe é responsável por garantir a animação e a qualidade sonora em cada evento.</p>
+            </div>
+        </div>
+        <div class="membro">
+            <img src="/static/images/membro3.jpg" alt="Adriana Britto">
+            <div class="descricao">
+                <h3>Adriana Britto</h3>
+                <p>Responsável pela gestão, Adriana cuida de toda a parte administrativa e organizacional da empresa.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 KS Sonorização. Todos os direitos reservados. <a href="/termos">Termos de Uso</a> | <a href="/politica">Política de Privacidade</a></p>
+    </footer>
+
+    <div class="cookie-banner" id="cookie-banner">
+        <p>Este site utiliza cookies para garantir a melhor experiência. Ao continuar navegando, você aceita nossa <a href="/politica" style="color: yellow;">Política de Privacidade</a>.</p>
+        <button onclick="acceptCookies()">Aceitar</button>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+
+        window.onload = function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>

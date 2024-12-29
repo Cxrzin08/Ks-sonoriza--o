@@ -22,12 +22,16 @@ header {
     text-align: center;
     padding: 20px;
     animation: slideDown 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header .logo {
     width: 200px;
     height: auto;
-    border-radius: 10px;
+    border: none; /* Remove o contorno da logo */
+    border-radius: 0; /* Remove as bordas arredondadas da logo */
 }
 
 header h1 {
@@ -35,6 +39,10 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-size: 3em;
     margin: 10px 0 0 0;
+    border: none; /* Remove o contorno do texto do título */
+    display: inline-block;
+    padding: 0; /* Remove o padding do texto do título */
+    border-radius: 0; /* Remove as bordas arredondadas do texto do título */
 }
 
 nav {
@@ -87,11 +95,11 @@ section {
 section h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #fff;
-    background: linear-gradient(to right, yellow, black);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #b0b0b0; /* Cor cinza metálico */
+    background: none; /* Remove o gradiente */
+    background-clip: border-box; /* Define the standard background-clip */
+    -webkit-background-clip: border-box; /* Remove o background-clip */
+    -webkit-text-fill-color: #b0b0b0; /* Cor cinza metálico */
 }
 
 section p {
@@ -203,6 +211,28 @@ footer a:hover {
 
 .cookie-banner button:hover {
     background-color: #45a049;
+}
+
+#contato {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#contato .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#contato .social-icons a {
+    font-size: 2em;
+    color: yellow;
+    transition: color 0.3s;
+}
+
+#contato .social-icons a:hover {
+    color: #ff0;
 }
 
 @keyframes fadeIn {
