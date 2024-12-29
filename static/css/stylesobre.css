@@ -141,13 +141,6 @@ header h1 {
     animation: pulse 2s infinite; /* Animação de pulsar */
 }
 
-.membro p {
-    font-size: 20px;
-    color: #f0f0f0;
-    line-height: 1.6;
-    animation: fadeIn 2s ease-in-out;
-}
-
 .servico {
     text-align: center;
     margin: 40px auto;
