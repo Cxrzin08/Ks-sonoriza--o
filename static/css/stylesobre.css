@@ -8,47 +8,6 @@ body {
     position: relative;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(to right, #333, #000);
-    padding: 15px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    animation: slideDown 1s ease-in-out;
-}
-
-nav .logo-small {
-    width: 50px;
-    height: auto;
-    border-radius: 5px;
-}
-
-nav .nav-links {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-}
-
-nav .nav-links a {
-    color: yellow;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: color 0.3s, background-color 0.3s, transform 0.3s;
-}
-
-nav .nav-links a:hover {
-    color: #333;
-    background-color: yellow;
-    transform: scale(1.1);
-}
-
 header {
     text-align: center;
     padding: 20px;
@@ -61,8 +20,8 @@ header {
 header .logo {
     width: 200px;
     height: auto;
-    border: none; /* Remove o contorno da logo */
-    border-radius: 0; /* Remove as bordas arredondadas da logo */
+    border: 2px solid #ccc; /* Adiciona contorno */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
 }
 
 header h1 {
@@ -164,12 +123,29 @@ header h1 {
     max-width: 500px;
 }
 
+.membro img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.membro .descricao {
+    max-width: 500px;
+    text-align: center;
+}
+
 .membro h3 {
     font-size: 28px;
     color: yellow;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     animation: pulse 2s infinite; /* Animação de pulsar */
+}
+
+.membro p {
+    font-size: 20px;
+    color: #f0f0f0;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .servico {
@@ -356,30 +332,17 @@ img:hover {
 
 /* Responsividade para tablets */
 @media (max-width: 768px) {
-    nav .nav-links {
+    .membro {
         flex-direction: column;
     }
 
-    nav .nav-links a {
-        margin: 10px 0;
-    }
-
-    .evento, .membro {
-        flex-direction: column;
-    }
-
-    .evento img, .membro img {
+    .membro img {
         margin: 0 0 20px 0;
     }
 
-    .descricao-container, .servico, .contato-container {
+    .descricao-container, .membro {
         max-width: 100%;
         padding: 10px;
-    }
-
-    .localizacao-container iframe {
-        width: 100%;
-        height: 300px;
     }
 }
 
@@ -389,15 +352,62 @@ img:hover {
         font-size: 2em;
     }
 
-    .evento h3, .localizacao-container h2, .contato-container h2 {
+    .membro h3 {
         font-size: 24px;
     }
 
-    .evento p, .localizacao-container p, .contato-container p {
+    .membro p {
         font-size: 18px;
     }
+}
 
-    .localizacao-container iframe {
-        height: 200px;
-    }
+/* Adicionando estilos para o drawer */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+}
+
+.drawer.active {
+    transform: translateX(0);
+}
+
+.drawer .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drawer .nav-links a {
+    color: yellow;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+.drawer .nav-links a:hover {
+    color: #333;
+    background-color: yellow;
+    transform: scale(1.1);
+}
+
+.drawer-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    color: yellow;
+    cursor: pointer;
+    z-index: 1001;
 }
