@@ -20,8 +20,8 @@ header {
 header .logo {
     width: 200px;
     height: auto;
-    border: 2px solid #ccc; /* Adiciona contorno */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
+    border: 2px solid #ccc;
+    border-radius: 10px;
 }
 
 header h1 {
@@ -29,10 +29,10 @@ header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-size: 3em;
     margin: 10px 0 0 0;
-    border: none; /* Remove o contorno do texto do título */
+    border: none; 
     display: inline-block;
-    padding: 0; /* Remove o padding do texto do título */
-    border-radius: 0; /* Remove as bordas arredondadas do texto do título */
+    padding: 0; 
+    border-radius: 0;
 }
 
 #sobre {
@@ -42,9 +42,9 @@ header h1 {
 }
 
 #sobre .descricao-container {
-    border: 2px solid #b0b0b0; /* Adiciona contorno */
+    border: 2px solid #b0b0b0;
     padding: 20px;
-    border-radius: 10px; /* Adiciona bordas arredondadas */
+    border-radius: 10px;
     display: inline-block;
     max-width: 800px;
     margin: 0 auto;
@@ -53,19 +53,19 @@ header h1 {
 #sobre h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: yellow; /* Cor amarela */
-    background: none; /* Remove o gradiente */
-    -webkit-text-fill-color: yellow; /* Cor amarela */
-    animation: pulse 2s infinite; /* Animação de pulsar */
-    text-shadow: 0 0 10px yellow; /* Adiciona brilho */
+    color: yellow;
+    background: none; 
+    -webkit-text-fill-color: yellow;
+    animation: pulse 2s infinite;
+    text-shadow: 0 0 10px yellow;
 }
 
 #sobre p.descricao {
-    font-size: 26px; /* Aumenta o tamanho da fonte */
-    color: #f0f0f0; /* Cor branca ou cinza mais claro */
-    font-family: 'Georgia', serif; /* Melhora a fonte */
+    font-size: 26px;
+    color: #f0f0f0; 
+    font-family: 'Georgia', serif;
     animation: fadeIn 2s ease-in-out;
-    line-height: 1.6; /* Melhora a legibilidade */
+    line-height: 1.6; 
 }
 
 #equipe {
@@ -173,6 +173,7 @@ header h1 {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 footer {
     text-align: center;
